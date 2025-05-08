@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Formulario from './components/Formulario';
+import ListadoCitas from './components/ListadoCitas';
+import './css/App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [citas, setCitas] = useState([
+    {
+      id: "1",
+      mascota: "Nina",
+      propietario: "Martin",
+      fecha: "2021-08-05",
+      hora: "08:20",
+      sintomas: "Le duele la pierna"
+    },
+    {
+      id: "2",
+      mascota: "Sifon",
+      propietario: "Flecha",
+      fecha: "2023-08-05",
+      hora: "09:24",
+      sintomas: "Duerme mucho"
+    }
+  ]);
+
+  const agregarCita = (nuevaCita) => {
+    setCitas([...citas, {...nuevaCita, id: Date.now()}]);
+  };
+
+  const eliminarCita = (id) => {
+    setCitas(citas.filter(cita => cita.id !== id));
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>ADMINISTRADOR DE PACIENTES</h1>
+      <div className="container">
+        <div className="row">
+          <div className="one-half column">
+            <Formulario onAgregarCita={agregarCita} />
+          </div>
+          <div className="one-half column">
+            <ListadoCitas citas={citas} onEliminarCita={eliminarCita} />
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
