@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './css/Formulario.css';
+import './Formulario.css';
 
 const Formulario = ({ onAgregarCita }) => {
   const [formData, setFormData] = useState({

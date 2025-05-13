@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Formulario from './components/Formulario';
-import ListadoCitas from './components/ListadoCitas';
-import './css/App.css';
+import Formulario from './Formulario';
+import ListadoCitas from './ListadoCitas';
+import './App.css';
 
 function App() {
   const [citas, setCitas] = useState([

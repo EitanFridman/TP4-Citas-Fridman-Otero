@@ -1,4 +1,4 @@
-import './css/Cita.css';
+import './Cita.css';
 
 const Cita = ({ cita, onEliminarCita }) => {
   return (

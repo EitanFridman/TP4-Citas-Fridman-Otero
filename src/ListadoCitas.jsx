@@ -1,5 +1,5 @@
 import Cita from './Cita';
-import './css/ListadoCitas.css';
+import './ListadoCitas.css';
 
 const ListadoCitas = ({ citas, onEliminarCita }) => {
   return (

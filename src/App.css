@@ -11,8 +11,7 @@ html {
     padding-bottom: 5rem;
   }
   
-  h1,
-  h2 {
+  h1, h2 {
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -29,4 +28,19 @@ html {
     text-transform: uppercase;
     text-align: center;
     font-family: 'Staatliches', cursive;
+  }
+
+  .row {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .one-half {
+    flex: 1;
   }
