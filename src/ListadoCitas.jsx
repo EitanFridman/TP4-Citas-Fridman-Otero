@@ -4,6 +4,7 @@ import './ListadoCitas.css';
 const ListadoCitas = ({ citas, onEliminarCita }) => {
   return (
     <div className="lista-citas">
+      <h2>Administra tus citas</h2>
       {citas.map(cita => (
         <Cita
           key={cita.id}

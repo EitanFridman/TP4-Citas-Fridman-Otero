@@ -37,6 +37,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="one-half column">
+            <h2>Crear mi Cita</h2>
             <Formulario onAgregarCita={agregarCita} />
           </div>
           <div className="one-half column">

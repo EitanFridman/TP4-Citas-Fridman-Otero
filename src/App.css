@@ -30,7 +30,7 @@ html {
     font-family: 'Staatliches', cursive;
   }
 
-  .row {
+  /* .row {
     display: flex;
     gap: 1rem;
     justify-content: space-evenly;
@@ -43,4 +43,4 @@ html {
 
   .one-half {
     flex: 1;
-  }
+  } */
